@@ -1,0 +1,378 @@
+
+[vpaz@login3 ~]$ [vpaz@login3 ~]$ git add files
+-bash: [vpaz@login3: command not found
+[vpaz@login3 ~]$ git commit -m 'all done' files
+fatal: Not a git repository (or any of the parent directories): .git
+[vpaz@login3 ~]$ git push
+fatal: Not a git repository (or any of the parent directories): .git
+[vpaz@login3 ~]$ rm answers.txt
+[vpaz@login3 ~]$ ls
+biosys-analytics  ondemand              unclustered-proteins.tgz
+foo               unclustered-proteins  who
+[vpaz@login3 ~]$ `echo "export PATH=/rsgrps/bh_class/conda/bin:/rsgrp
+s/bh_class/bin:$PATH" >> ~/.bashrc`
+[vpaz@login3 ~]$ `git pull upstream master`
+fatal: Not a git repository (or any of the parent directories): .git
+[vpaz@login3 ~]$ `git push`
+fatal: Not a git repository (or any of the parent directories): .git
+[vpaz@login3 ~]$ echo $PATH
+/cm/local/apps/gcc/6.1.0/bin:/cm/shared/uaapps/pbspro/18.2.1/sbin:/cm
+/shared/uaapps/pbspro/18.2.1/bin:/opt/TurboVNC/bin:/cm/shared/uabin:/
+usr/lib64/qt-3.3/bin:/cm/local/apps/environment-modules/4.0.0//bin:/u
+sr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/sbin:/usr
+/sbin:/cm/local/apps/environment-modules/4.0.0/bin:/home/u17/vpaz/.lo
+cal/bin:/home/u17/vpaz/bin
+[vpaz@login3 ~]$ export PATH="/rsgrps/bh_class/conda/bin:/rsgrps/bh_c
+lass/bin:$PATH"
+[vpaz@login3 ~]$ echo "export PATH=/rsgrps/bh_class/conda/bin:/rsgrps
+/bh_class/bin:$PATH" >> ~/.bashrc
+[vpaz@login3 ~]$ echo $PATH
+/rsgrps/bh_class/conda/bin:/rsgrps/bh_class/bin:/cm/local/apps/gcc/6.
+1.0/bin:/cm/shared/uaapps/pbspro/18.2.1/sbin:/cm/shared/uaapps/pbspro
+/18.2.1/bin:/opt/TurboVNC/bin:/cm/shared/uabin:/usr/lib64/qt-3.3/bin:
+/cm/local/apps/environment-modules/4.0.0//bin:/usr/local/bin:/bin:/us
+r/bin:/usr/local/sbin:/usr/sbin:/sbin:/sbin:/usr/sbin:/cm/local/apps/
+environment-modules/4.0.0/bin:/home/u17/vpaz/.local/bin:/home/u17/vpa
+z/bin
+[vpaz@login3 ~]$ mkdir files
+[vpaz@login3 ~]$ ls
+biosys-analytics  foo       unclustered-proteins      who
+files             ondemand  unclustered-proteins.tgz
+[vpaz@login3 ~]$ cd files
+[vpaz@login3 files]$ ls
+[vpaz@login3 files]$ touch answers.txt
+[vpaz@login3 files]$ ls
+answers.txt
+[vpaz@login3 files]$ git --version
+git version 1.7.1
+[vpaz@login3 files]$ git clone git@github.com:yourusername/biosys-ana
+lytics.git
+Initialized empty Git repository in /home/u17/vpaz/files/biosys-analy
+tics/.git/
+ERROR: Repository not found.
+fatal: The remote end hung up unexpectedly
+[vpaz@login3 files]$ git clone git@github.com:vpaz1/biosys-analytics.git
+Initialized empty Git repository in /home/u17/vpaz/files/biosys-analytics/.git/
+remote: Enumerating objects: 246, done.
+remote: Total 246 (delta 0), reused 0 (delta 0), pack-reused 246
+Receiving objects: 100% (246/246), 1.14 MiB | 1.22 MiB/s, done.
+Resolving deltas: 100% (23/23), done.
+[vpaz@login3 files]$ git remote add upstream https://github.com/hurwi
+tzlab/biosys-analytics.git
+fatal: Not a git repository (or any of the parent directories): .git
+[vpaz@login3 files]$ 
+[vpaz@login3 files]$ cd
+[vpaz@login3 ~]$ git clone git@github.com:vpaz1/biosys-analytics.git
+fatal: destination path 'biosys-analytics' already exists and is not 
+an empty directory.
+[vpaz@login3 ~]$ rm files
+rm: cannot remove `files': Is a directory
+[vpaz@login3 ~]$ git pull upstream master
+fatal: Not a git repository (or any of the parent directories): .git
+[vpaz@login3 ~]$ cd files
+[vpaz@login3 files]$ rmdir files
+rmdir: failed to remove `files': No such file or directory
+[vpaz@login3 files]$ rmdir files/
+rmdir: failed to remove `files/': No such file or directory
+[vpaz@login3 files]$ cd
+[vpaz@login3 ~]$ rmdir files/
+rmdir: failed to remove `files/': Directory not empty
+[vpaz@login3 ~]$ rm -r files
+rm: remove write-protected regular file `files/biosys-analytics/.git/
+objects/pack/pack-9e7e58419a5465611522637e47efd819c6b4e1af.pack'? ls
+rm: remove write-protected regular file `files/biosys-analytics/.git/
+objects/pack/pack-9e7e58419a5465611522637e47efd819c6b4e1af.idx'? yes
+rm: cannot remove `files/biosys-analytics/.git/objects/pack': Directo
+ ry not empty
+[vpaz@login3 ~]$ ls
+biosys-analytics  foo       unclustered-proteins      who
+files             ondemand  unclustered-proteins.tgz
+[vpaz@login3 ~]$ rm -rf files
+[vpaz@login3 ~]$ ls
+biosys-analytics  ondemand              unclustered-proteins.tgz
+foo               unclustered-proteins  who
+[vpaz@login3 ~]$ git clone git@github.com:yourusername/biosys-analyti
+cs.git
+fatal: destination path 'biosys-analytics' already exists and is not 
+an empty directory.
+[vpaz@login3 ~]$ git remote add upstream https://github.com/hurwitzla
+b/biosys-analytics.git
+fatal: Not a git repository (or any of the parent directories): .git
+[vpaz@login3 ~]$ cd biosys-analytics
+[vpaz@login3 biosys-analytics]$ git remote add upstream https://githu
+b.com/hurwitzlab/biosys-analytics.git
+[vpaz@login3 biosys-analytics]$ git pull upstream master
+remote: Enumerating objects: 96, done.
+remote: Counting objects: 100% (96/96), done.
+remote: Compressing objects: 100% (61/61), done.
+remote: Total 142 (delta 27), reused 96 (delta 27), pack-reused 46
+Receiving objects: 100% (142/142), 828.30 KiB | 1.33 MiB/s, done.
+Resolving deltas: 100% (35/35), completed with 4 local objects.
+From https://github.com/hurwitzlab/biosys-analytics
+ * branch            master     -> FETCH_HEAD
+Updating 9363e76..e7d49c8
+Fast-forward
+ assignments/01-unix-grad/README.md                 |   22 +
+ assignments/01-unix/README.md                      |   29 +
+ assignments/02-bash-scripting/.gitignore           |    1 +
+ .../02-bash-scripting/.pytest_cache/README.md      |    8 +
+ .../.pytest_cache/v/cache/lastfailed               |    7 +
+ .../.pytest_cache/v/cache/nodeids                  |    7 +
+ assignments/02-bash-scripting/Makefile             |   13 +
+ assignments/02-bash-scripting/README.md            |  113 ++
+ assignments/02-bash-scripting/README.pdf           |  Bin 0 -> 10464
+5 bytes
+ assignments/02-bash-scripting/files/issa.txt       |   37 +
+ assignments/02-bash-scripting/files/sonnet-29.txt  |   17 +
+ assignments/02-bash-scripting/files/t1.txt         |   10 +
+ assignments/02-bash-scripting/test.py              |   64 +
+ bin/new_bash.py  
+ create mode 100755 bin/new_bash.py
+ create mode 100755 bin/new_py.py
+ create mode 100644 lectures/01-intro/01-intro.pdf
+ create mode 100644 lectures/02-unix/files.png
+ create mode 100644 lectures/04-shell-scripting/04-shell-scripting.pd
+f
+ create mode 100644 lectures/04-shell-scripting/Makefile
+ create mode 100755 lectures/04-shell-scripting/examples/args.sh
+ create mode 100755 lectures/04-shell-scripting/examples/args2.sh
+ create mode 100755 lectures/04-shell-scripting/examples/args3.sh
+ create mode 100755 lectures/04-shell-scripting/examples/basic.sh
+ create mode 100644 lectures/04-shell-scripting/examples/config1.sh
+ create mode 100644 lectures/04-shell-scripting/examples/config2.sh
+ create mode 100755 lectures/04-shell-scripting/examples/count-fa.sh
+ create mode 100755 lectures/04-shell-scripting/examples/for-read-fil
+e.sh
+ create mode 100755 lectures/04-shell-scripting/examples/for.sh
+ create mode 100755 lectures/04-shell-scripting/examples/functions.sh
+ create mode 100755 lectures/04-shell-scripting/examples/hello.sh
+ create mode 100755 lectures/04-shell-scripting/examples/hello2.sh
+ create mode 100755 lectures/04-shell-scripting/examples/hello3.sh
+ create mode 100755 lectures/04-shell-scripting/examples/hello4.sh
+ create mode 100755 lectures/04-shell-scripting/examples/hello5.sh
+ create mode 100755 lectures/04-shell-scripting/examples/hello6.sh
+ create mode 100755 lectures/04-shell-scripting/examples/hello7.sh
+ create mode 100755 lectures/04-shell-scripting/examples/hello8.sh
+ create mode 100755 lectures/04-shell-scripting/examples/hello9.sh
+ create mode 100755 lectures/04-shell-scripting/examples/named.sh
+ create mode 100755 lectures/04-shell-scripting/examples/positional.s
+h
+ create mode 100755 lectures/04-shell-scripting/examples/positional2.
+sh
+ create mode 100755 lectures/04-shell-scripting/examples/positional3.
+sh
+ create mode 100755 lectures/04-shell-scripting/examples/read-config.
+sh
+ create mode 100755 lectures/04-shell-scripting/examples/read-config2
+.sh
+ create mode 100755 lectures/04-shell-scripting/examples/read.sh
+ create mode 100755 lectures/04-shell-scripting/examples/set-u-bug1.s
+h
+ create mode 100755 lectures/04-shell-scripting/examples/set-u-bug2.s
+h
+ create mode 100755 lectures/04-shell-scripting/examples/while.sh
+ create mode 100755 lectures/04-shell-scripting/examples/while2.sh
+ create mode 100644 lectures/04-shell-scripting/shell-scripting.md
+[vpaz@login3 biosys-analytics]$ ls
+assignments  bin  data  examples  lectures  LICENSE  README.md
+[vpaz@login3 biosys-analytics]$ mkdir files
+[vpaz@login3 biosys-analytics]$ ls
+assignments  data      files     LICENSE
+bin          examples  lectures  README.md
+[vpaz@login3 biosys-analytics]$ cd files
+[vpaz@login3 files]$ touch answers.txt
+[vpaz@login3 files]$ ls
+answers.txt
+[vpaz@login3 files]$ git add files
+fatal: pathspec 'files/files' did not match any files
+[vpaz@login3 files]$ cd
+[vpaz@login3 ~]$ git add files
+fatal: Not a git repository (or any of the parent directories): .git
+[vpaz@login3 ~]$ cd biosys-analytics/
+[vpaz@login3 biosys-analytics]$ ls
+assignments  data      files     LICENSE
+bin          examples  lectures  README.md
+[vpaz@login3 biosys-analytics]$ git add files
+[vpaz@login3 biosys-analytics]$ git commit -m 'all done' files
+[master 77199ff] all done
+ Committer: Veronica Paz <vpaz@login3.cm.cluster>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+If the identity used for this commit is wrong, you can fix it with:
+    git commit --amend --author='Your Name <you@example.com>'
+ 0 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 files/answers.txt
+[vpaz@login3 biosys-analytics]$ git push
+Counting objects: 154, done.
+Delta compression using up to 28 threads.
+Compressing objects: 100% (90/90), done.
+Writing objects: 100% (146/146), 825.13 KiB, done.
+Total 146 (delta 36), reused 140 (delta 33)
+remote: Resolving deltas: 100% (36/36), completed with 3 local object
+s.
+To git@github.com:vpaz1/biosys-analytics.git
+   9363e76..77199ff  master -> master
+[vpaz@login3 biosys-analytics]$ wget "https://www.constitution.org/us
+declar.txt"
+--2019-01-21 22:41:34--  https://www.constitution.org/usdeclar.txt
+Resolving www.constitution.org... 52.52.207.176, 52.52.40.206, 52.52.
+39.236, ...
+Connecting to www.constitution.org|52.52.207.176|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/plain]
+Saving to: “usdeclar.txt”
+    [ <=>                        ] 8,685       --.-K/s   in 0s      
+2019-01-21 22:41:34 (112 MB/s) - “usdeclar.txt” saved [8685]
+[vpaz@login3 biosys-analytics]$ ls
+assignments  data      files     LICENSE    usdeclar.txt
+bin          examples  lectures  README.md
+[vpaz@login3 biosys-analytics]$ rm usdeclar.txt
+[vpaz@login3 biosys-analytics]$ ls
+assignments  data      files     LICENSE
+bin          examples  lectures  README.md
+[vpaz@login3 biosys-analytics]$ cd files/
+[vpaz@login3 files]$ wget "https://www.constitution.org/usdeclar.txt"
+--2019-01-21 22:43:05--  https://www.constitution.org/usdeclar.txt
+Resolving www.constitution.org... 52.52.207.176, 54.153.63.33, 52.52.
+2.146, ...
+Connecting to www.constitution.org|52.52.207.176|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/plain]
+Saving to: “usdeclar.txt”
+    [ <=>                        ] 8,685       --.-K/s   in 0s      
+2019-01-21 22:43:05 (120 MB/s) - “usdeclar.txt” saved [8685]
+[vpaz@login3 files]$ ls
+answers.txt  usdeclar.txt
+[vpaz@login3 files]$ wget "https://www.usconstitution.net/const.txt"
+--2019-01-21 22:43:26--  https://www.usconstitution.net/const.txt
+Resolving www.usconstitution.net... 52.52.39.236
+Connecting to www.usconstitution.net|52.52.39.236|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/plain]
+Saving to: “const.txt”
+    [ <=>                        ] 45,119      --.-K/s   in 0.04s   
+2019-01-21 22:43:26 (1.07 MB/s) - “const.txt” saved [45119]
+[vpaz@login3 files]$ ls
+answers.txt  const.txt  usdeclar.txt
+[vpaz@login3 files]$ wget -c "https://www.gutenberg.org/files/25344/2
+5344-0.txt" -O scarlet.txt
+--2019-01-21 22:49:34--  https://www.gutenberg.org/files/25344/25344-
+0.txt
+Resolving www.gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad
+:cafe:47
+Connecting to www.gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 525464 (513K) [text/plain]
+Saving to: “scarlet.txt”
+100%[===========================>] 525,464      728K/s   in 0.7s    
+2019-01-21 22:49:35 (728 KB/s) - “scarlet.txt” saved [525464/525464]
+[vpaz@login3 files]$ ls
+answers.txt  const.txt  scarlet.txt  usdeclar.txt
+[vpaz@login3 files]$ wc -l const.txt
+872 const.txt
+[vpaz@login3 files]$ wc -l const.txt scarlet.txt usdeclar.txt
+   872 const.txt
+  9120 scarlet.txt
+   176 usdeclar.txt
+ 10168 total
+[vpaz@login3 files]$ wc -l const.txt scarlet.txt usdeclar.txt answers
+.txt
+   872 const.txt
+  9120 scarlet.txt
+   176 usdeclar.txt
+     0 answers.txt
+ 10168 total
+[vpaz@login3 files]$ find . -type f -size +50k
+./scarlet.txt
+[vpaz@login3 files]$ file "const.txt"
+const.txt: ASCII English text
+[vpaz@login3 files]$ file -i "const.txt"
+const.txt: text/plain; charset=us-ascii
+[vpaz@login3 files]$ file --mime-type "const.txt"
+const.txt: text/plain
+[vpaz@login3 files]$ md5sum answers.txt const.txt scarlet.txt usdeclar.txt > myfiles.md
+5
+[vpaz@login3 files]$ md5sum --check myfiles.md5
+answers.txt: OK
+const.txt: OK
+scarlet.txt: OK
+usdeclar.txt: OK
+[vpaz@login3 files]$ df --block-size=K
+Filesystem                1K-blocks           Used     Available Use% Mounted on
+/dev/sda2                944785812K      27700968K    869085768K   4% /
+none                      98884376K             4K     98884372K   1% /dev/shm
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs1/rsgrps
+                     1543570980864K 1199573175296K 343997805568K  78% /rsgrps
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs2/pbs
+                       35970351104K    6870317056K  29100034048K  20% /pbs
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs2/Bright_cm_shared
+                       35970351104K    6870317056K  29100034048K  20% /cm/shared
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs1/bio5
+                        4294967296K     410201088K   3884766208K  10% /bio5
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs2/unsupported
+                       35970351104K    6870317056K  29100034048K  20% /unsupported
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs3/extra
+                      540897443840K   47369465856K 493527977984K   9% /extra
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs3/xdisk
+                       10737418240K             0K  10737418240K   0% /xdisk
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs2/home
+                       35970351104K    6870317056K  29100034048K  20% /home
+[vpaz@login3 files]$ grep -r "judge" . | wc -l
+17
+[vpaz@login3 files]$ grep -l "human" *.txt
+scarlet.txt
+usdeclar.txt
+[vpaz@login3 files]$ grep -o 'scarlet' *scarlet.txt | wc -l
+108
+[vpaz@login3 files]$ grep -io 'scarlet' scarlet.txt | wc -l
+125
+[vpaz@login3 files]$ head -n15 -q *.txt > foo
+[vpaz@login3 files]$ ls
+answers.txt  const.txt  foo  myfiles.md5  scarlet.txt  usdeclar.txt
+[vpaz@login3 files]$ wc -l foo
+45 foo
+[vpaz@login3 files]$ wc -l const.txt scarlet.txt usdeclar.txt 
+   872 const.txt
+  9120 scarlet.txt
+   176 usdeclar.txt
+ 10168 total
+
+********It should have been less than 45 lines because the some of the lines contain space and no words.*********
+
+[vpaz@login3 files]$ rm foo
+[vpaz@login3 files]$ ls
+answers.txt  const.txt  myfiles.md5  scarlet.txt  usdeclar.txt
+[vpaz@login3 biosys-analytics]$ git add -A files
+[vpaz@login3 biosys-analytics]$ cd
+[vpaz@login3 ~]$ git add -A files
+fatal: Not a git repository (or any of the parent directories): .git
+[vpaz@login3 ~]$ cd biosys-analytics/
+[vpaz@login3 biosys-analytics]$ git add files
+[vpaz@login3 biosys-analytics]$ git commit -m 'all done' files
+[master 05cbb34] all done
+ Committer: Veronica Paz <vpaz@login3.cm.cluster>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+If the identity used for this commit is wrong, you can fix it with:
+    git commit --amend --author='Your Name <you@example.com>'
+ 4 files changed, 10172 insertions(+), 0 deletions(-)
+ create mode 100644 files/const.txt
+ create mode 100644 files/myfiles.md5
+ create mode 100644 files/scarlet.txt
+ create mode 100644 files/usdeclar.txt
+[vpaz@login3 biosys-analytics]$ git push
+Counting objects: 9, done.
+Delta compression using up to 28 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 215.92 KiB, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To git@github.com:vpaz1/biosys-analytics.git
+   77199ff..05cbb34  master -> master
+
