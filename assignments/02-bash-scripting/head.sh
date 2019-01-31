@@ -6,7 +6,9 @@ NUM=$2
 if [[ $# -lt 1 ]]; then # if the num of args is equal to 1
         echo "Usage: head.sh FILE NUM_LINES"
         exit 1
-elif [[ $# -eq 1 ]] && [[ -f "$FILE" ]]; then # Only one argument default 3
+fi
+
+if [[ $# -eq 1 ]] && [[ -f "$FILE" ]]; then # Only one argument default 3
 i=0
 while read -r LINE; do
         echo $LINE
@@ -16,7 +18,9 @@ while read -r LINE; do
         fi
 done < "$FILE"
 	exit 1
-elif [[ $# -eq 2 ]] && [[ -f "$FILE" ]] ; then # Both arguments
+fi
+
+if [[ $# -eq 2 ]] && [[ -f "$FILE" ]] ; then # Both arguments
 i=0
 while read -r LINE; do
 	echo $LINE
