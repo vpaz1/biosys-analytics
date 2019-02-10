@@ -47,7 +47,8 @@ def main():
               if i == nums:
                 break
          elif nums <= 0:
-           print('lines ({}) must be a positive number'.format(nums))
+           print('lines ({}) must be a positive number'.format(nums))  
+           sys.exit(1)
         
 # --------------------------------------------------
 main()
