@@ -21,7 +21,7 @@ def get_args():
     #    'input', nargs='+', type=str)
 
     parser.add_argument(
-        'FILE', nargs='+',  metavar='FILE', help='BLAST output (-outfmt 6)')
+        'FILE', metavar='FILE', help='BLAST output (-outfmt 6)')
 
     parser.add_argument(
         '-a',
@@ -60,17 +60,19 @@ def main():
     """Make a jazz noise here"""
     args = get_args()
     annot = args.annotations
-    file_name = args.FILE
+    tab_file = args.FILE
     out_file = args.outfile
 
     
-    tab_file = file_name[0] 
+   # tab_file = file_name[0] 
     if not os.path.isfile(tab_file):
         die('"{}" is not a file'.format(tab_file))
    
     if not os.path.isfile(annot):
         die('"{}" is not a file'.format(annot)) 
    
+    
+
     with open(annot, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter ='\t')
         for row_csv in reader:
