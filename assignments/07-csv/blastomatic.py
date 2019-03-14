@@ -63,19 +63,20 @@ def main():
     file_name = args.FILE
     out_file = args.outfile
 
-    print(file_name[0])
-    print(annot)
     
     tab_file = file_name[0] 
     if not os.path.isfile(tab_file):
         die('"{}" is not a file'.format(tab_file))
-    
-    
+   
+    if not os.path.isfile(annot):
+        die('"{}" is not a file'.format(annot)) 
+   
     with open(annot, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter ='\t')
-    #    for row_csv in reader:
-     #      print('i')
-   
+        for row_csv in reader:
+            genus = row_csv[6][0:]
+            species = row_csv[7][0:]
+    
     with open(tab_file, 'r') as tabfile:
         readers = csv.reader(tabfile, delimiter = '\t')
         print('seq_id\t')
@@ -85,7 +86,11 @@ def main():
             pident = rows[2][0:] 
             print(seq_id)
             print(pident)
-          
+    if out_file:
+        out = open('out.txt', 'w')
+        out.writelines(seq_id, pident, genus, species)
+        out.close()
+ # print(','.join(seq_id, pident, genus, species)
            #outfile.write('\t',join(seq_id, pident)
         
 
