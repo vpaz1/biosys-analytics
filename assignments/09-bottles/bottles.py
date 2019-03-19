@@ -54,17 +54,26 @@ def main():
     num = list(reversed(sorted(range(bottles+1))))
     for i in num[::1]:
    # for i in range(bottles, 0, -1):
+        # if i > 1: 
          if i > 1:
-              print('{} bottles of beer on the wall,'.format(i))
-              print('{} bottles of beer,'.format(i))
-              print('Take one down, pass it around,'.format(i))
-              i = i - 1
-              print('{} bottle of beer on the wall!\n'.format(i))    
+             print('{} bottles of beer on the wall,'.format(i))
+             print('{} bottles of beer,'.format(i))
+             print('Take one down, pass it around,'.format(i))
+            # print('{} bottle of beer on the wall!\n'.format(i))
+             i = i - 1
+             if i == 1:
+                 print('{} bottle of beer on the wall!\n'.format(i))    
+             else:
+                 print('{} bottles of beer on the wall!\n'.format(i))
          else:
+             # print('{} bottle of beer on the wall!\n'.format(i))
+             # if i == 0:            
               print('{} bottle of beer on the wall,'.format(i))
               print('{} bottle of beer,'.format(i))
               print('Take one down, pass it around,'.format(i))
+              
               i = i - 1
+             # if i == 0:
               print('{} bottles of beer on the wall!'.format(i))
               exit(0)
      
