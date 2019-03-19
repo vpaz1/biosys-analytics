@@ -51,13 +51,10 @@ def main():
 
     if bottles < 1:
          die('N() must be a positive integer')
- 
-   # num = list(reversed(range(11)))
-    
-   # while (bottles >= 0):
-    for i in range(bottles, 0, -1):
+    num = list(reversed(sorted(range(bottles+1))))
+    for i in num[::1]:
+   # for i in range(bottles, 0, -1):
          if i > 1:
-             # new_num = list(reversed(range(bottles+1)))
               print('{} bottles of beer on the wall,'.format(i))
               print('{} bottles of beer,'.format(i))
               print('Take one down, pass it around,'.format(i))
