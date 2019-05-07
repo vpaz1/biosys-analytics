@@ -1,0 +1,2 @@
+https://github.com/vpaz1/palindrome.git
+git@github.com:vpaz1/palindrome.git
